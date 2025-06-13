@@ -1,0 +1,406 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #0f172a,
+    #1e3a8a
+  ); /* Interactive blue gradient */
+  color: white;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Kept on the right as the brand is now separate */
+  display: flex;
+  gap: 2rem; /* Increased from 1rem for better spacing */
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-brand {
+  position: absolute; /* Positioned independently */
+  top: 20px; /* Aligned to the top */
+  left: 20px; /* Aligned to the left */
+  color: #eab308;
+  font-size: 1.8rem; /* Made brand slightly larger for prominence */
+  font-weight: bold;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.nav-btn:hover {
+  color: #facc15;
+}
+
+.main-content {
+  margin-top: 100px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.footer {
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  color: #d1d5db;
+}
+
+.welcome-section {
+  margin-top: 5rem;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  margin: 100px auto 0; /* Matches spacing of main-content */
+}
+
+.resume-frame {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Button styling */
+.download-btn {
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #facc15;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #eab308;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #facc15;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #eab308;
+}
+.typewriter-text {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #facc15;
+}
+
+.looping-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #38bdf8;
+}
+
+.highlight {
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  width: 10px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: waveHand 1.6s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes waveHand {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  45% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* Base styles for the Skills section */
+section.mb-10 {
+  padding: 1rem;
+}
+
+/* Heading styles */
+h2.text-2xl {
+  text-align: center;
+  color: #facc15; /* Matches the yellow-400 color in the image */
+  margin-bottom: 1.5rem;
+}
+
+/* Grid layout for the skills list */
+ul.flex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 5 columns like in the image */
+  gap: 1rem; /* Space between grid items */
+  justify-items: center; /* Center items in each grid cell */
+  max-width: 800px; /* Limit the width for better alignment */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Styles for each skill item */
+li.flex {
+  display: flex;
+  flex-direction: column; /* Stack icon and name vertically */
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Fixed width for each box */
+  height: 100px; /* Height to accommodate the name */
+  background-color: #1f2937; /* Dark background like in the image (gray-800) */
+  border: 2px solid #facc15; /* Yellow border to match the image */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for all hover effects */
+}
+
+/* Hover effects for mouseover */
+li.flex:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+  background-color: #374151; /* Slightly lighter background (gray-700) */
+  transform: scale(1.1); /* Slightly scale up the item on hover */
+  border-color: #fbbf24; /* Slightly brighter yellow border on hover */
+}
+
+/* Icon styles */
+i.text-xl {
+  font-size: 2.5rem; /* Larger icon size to match the image */
+  margin-bottom: 0.5rem; /* Space between icon and name */
+  transition: transform 0.3s ease; /* Smooth icon scaling */
+}
+
+/* Scale the icon slightly on hover */
+li.flex:hover i.text-xl {
+  transform: scale(1.2); /* Scale the icon a bit more on hover */
+}
+
+/* Skill name styles */
+li.flex span {
+  display: block; /* Make the name visible */
+  font-size: 0.75rem; /* Smaller font size to fit below the icon */
+  color: #ffffff; /* White text for contrast against the dark background */
+  text-align: center; /* Center the text */
+  line-height: 1; /* Tighten the line height for better spacing */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  ul.flex {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Reduce to 3 columns on smaller screens */
+  }
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  ul.flex {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Reduce to 2 columns on very small screens */
+  }
+
+  li.flex {
+    width: 70px; /* Slightly smaller boxes for very small screens */
+    height: 90px; /* Adjust height accordingly */
+  }
+
+  i.text-xl {
+    font-size: 2rem; /* Slightly smaller icon */
+  }
+
+  li.flex span {
+    font-size: 0.65rem; /* Smaller font size for the name */
+  }
+}
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #eab308;
+  font-style: normal;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid #60a5fa;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-family: cursive; /* Added cursive font style */
+}
+.text-lg {
+  font-size: 1.125rem;
+  margin-bottom: 2rem; /* Increased spacing below the text */
+}
+.text-sm {
+  font-size: 0.875rem;
+  color: #eab308;
+}
+.italic {
+  font-style: italic;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem; /* Added spacing above the icons */
+}
+.icon {
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  transition: background-color 0.2s;
+}
+.icon:hover {
+  background-color: #60a5fa;
+}
+.icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+/* New styles for the Home component's layout and profile image */
+.home-container {
+  /* This will be the main wrapper for image and text */
+  display: flex;
+  flex-direction: row; /* Default for larger screens */
+  align-items: center; /* Vertically align image and text */
+  justify-content: center; /* Center content when there's extra space */
+  gap: 3rem; /* Space between image and text */
+  max-width: 900px; /* Keep consistent with main-content */
+  margin: 100px auto 0; /* Center horizontally, push down from top */
+  padding: 0 2rem; /* Add horizontal padding for smaller screens */
+  text-align: left; /* Align text within its section to the left */
+}
+
+.profile-image-wrapper {
+  width: 200px; /* Set a fixed size for the circular wrapper */
+  height: 200px;
+  border-radius: 50%; /* Make it a circle */
+  overflow: hidden; /* Clip content outside the circle */
+  border: 4px solid #facc15; /* Add a border for aesthetics */
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add a subtle shadow */
+}
+
+.profile-image {
+  width: 100%; /* Make image fill the wrapper */
+  height: 100%;
+  object-fit: cover; /* Crop image to fit while maintaining aspect ratio */
+  display: block; /* Remove extra space below image */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    text-align: center; /* Center text when stacked */
+    gap: 2rem;
+  }
+
+  .profile-image-wrapper {
+    width: 150px; /* Smaller image on smaller screens */
+    height: 150px;
+  }
+
+  .profile-text-content {
+    max-width: 100%; /* Allow text to take full width when stacked */
+  }
+}
